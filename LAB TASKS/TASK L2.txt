@@ -1,0 +1,80 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of data values: ");
+        int n = sc.nextInt();
+
+        int sum = 0;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 1; i <= n; i++) {
+
+            System.out.print("Enter data " + i + ": ");
+            int value = sc.nextInt();
+
+            sum += value;
+            max = Math.max(max, value);
+            min = Math.min(min, value);
+
+            double average = (double) sum / i;
+
+            System.out.println("Running Sum: " + sum);
+            System.out.println("Average: " + average);
+            System.out.println("Maximum: " + max);
+            System.out.println("Minimum: " + min);
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+
+INPUT
+Enter number of data values: 5
+Enter data 1: 10
+Enter data 2: 20
+Enter data 3: 15
+Enter data 4: 30
+Enter data 5: 25
+
+OUTPUT
+Running Sum: 10
+Average: 10.0
+Maximum: 10
+Minimum: 10
+
+Running Sum: 30
+Average: 15.0
+Maximum: 20
+Minimum: 10
+
+Running Sum: 45
+Average: 15.0
+Maximum: 20
+Minimum: 10
+
+Running Sum: 75
+Average: 18.75
+Maximum: 30
+Minimum: 10
+
+Running Sum: 100
+Average: 20.0
+Maximum: 30
+Minimum: 10
+
+SIMPLE CONCEPT
+Input Stream
+     ↓
+Read Data
+     ↓
+Process Immediately
+     ↓
+Calculate Statistics
+     ↓
+Display Real-Time Result
